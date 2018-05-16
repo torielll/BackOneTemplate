@@ -1,12 +1,9 @@
 {
-  "name": "simple-gulp-start",
+  "name": "BackOneTemplate",
   "version": "1.0.0",
-  "description": "Simple Gulp Start Template (Sass, Browsersync, Uglify, cleanCSS, Autoprefixer)",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "WebDesign-Master.ru",
+  "author": "torielll",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
