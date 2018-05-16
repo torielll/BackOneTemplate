@@ -1,20 +1,50 @@
-*
+@import "vars"
+html
 	box-sizing: border-box
-	&:before, &:after
-		box-sizing: border-box
 
-html, body
-	height: 100%
+*, *:before, *:after 
+	box-sizing: inherit
 
+
+* 
+	max-height: 1000000px
+a
+	padding: 12px 10px
+	color:#000
+	text-decoration: none
+
+a:hover
+	text-decoration: pointer
+a:active 
+	background-color: transparent
+ul
+	padding: 0
+
+li 
+	list-style: none
+h1,h2,h3,h4,h5,h6
+	margin: 0
+h3
+	font-size: 28px
 body
+	text-align: center
+	color: #444444
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1
 	font-family: raleway-example, sans-serif
 	overflow-x: hidden
 	opacity: 1
-
+	max-width: 1020px
+	color: $textGrey
+a
+	color: $textGrey
+	&:hover
+			background: $linkColor
+			color: #fff
+p
+	text-align: center
 .img-responsive
 	display: block
 	max-width: 100%

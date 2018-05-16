@@ -5,4 +5,144 @@
 
 // Пользовательские стили
 
+body
+	margin: 0 auto
+//header
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 26px 40px 24px
+	color: $textGrey
+.logo
+	display: flex
+	vertical-align: top
+	img
+		height: 50px
+		width: auto
+	a
+		display: inline-block
+		vertical-align:top
+		text-align: left
+		background: #fff
+		color: $textGrey
+		
+	h1
+		margin: 0
+#nav
+	padding: 4px 0
+	ul
+		margin: 0
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+		a
+			padding: 12px 10px
+.header_content
+	background: url(../img/jumbotron.jpg) no-repeat
+	background-position: top center
+	//background-size: 100% auto
+	//background-attachment: fixed
+	min-height: 33.75em
+	position: relative
+	-webkit-background-size: cover
+	background-size: cover
+	padding: 78px 0
+	font-family: Lato light
+	color: $white
+	h2
+		display: inline-block
+		margin-left: -35px
+		font-size: 55px
+		margin: 0 0 40px 0
+		font-weight: 300
+	.bold
+		font-weight: bold
+	p
+		padding: 0 7.5%
+		font-size: 18px
+		margin: 0 0 50px 0
+	button
+		margin: 0 0 43px 0
+		padding: 14px 12px
+		background: $buttonColor
+		border: 0
+		color: $white
+		font-family: Lato
+		font-weight: bold
+		font-size: 13px
+	button:hover
+		transition-delay: 0.2s
+		transition: all 0,5s 
+		background: $linkHover
+	a
+		display: block
+		margin: 0 auto
+		height: 45px
+		width: 45px
+		border-radius: 50%
+		background: $white
+.portfolio
+	padding: 50px 0
+.portfoilio_header
+	h3
+		padding: 0 0 20px 0
+	p
+		padding: 0 0 40px 0
+.portfolio_nav
+	margin: 0 0 50px 0
+	ul
+		display: flex
+		margin: 0 auto
+		max-width: 50%
+		flex-direction: row
+		justify-content: space-between
+		a:hover
+			background: $linkHover
+		a
+			color: $white
+			background: $buttonColor
+.portfolio_content
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr
+	grid-column-gap: 60px
+	grid-row-gap: 35px
+	img
+		max-height: 170px
+		width: auto
+		border-radius: 50%
+	a
+		padding: 0
+		width: 170px
+		height: 170px
+		border-radius: 50%
+		display: inherit
+		justify-items: stretch
+	a:hover
+		cursor: pointer
+
+.about
+	padding: 70px 0 75px 0
+	background: $AboutBackground
+	&_content
+		padding: 0 60px
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		gap: 60px
+		&_item
+			background: $white
+			img
+				height: auto
+				width: 100%
+
+
+
+
+
+
+		
+			
+	
+
 @import "media" // Всегда в конце
