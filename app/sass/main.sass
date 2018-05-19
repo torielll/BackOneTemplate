@@ -20,9 +20,9 @@ body
 	img
 		height: 50px
 		width: auto
+		margin: 0 15px 0 0
 	a
-		display: inline-block
-		vertical-align:top
+		display: flex
 		text-align: left
 		background: #fff
 		color: $textGrey
@@ -78,10 +78,17 @@ body
 	a
 		display: block
 		margin: 0 auto
-		height: 45px
-		width: 45px
+		padding: 0
+		max-height: 45px
+		max-width: 45px
+		border: 0px solid
 		border-radius: 50%
-		background: $white
+		svg
+			border-radius: 50%
+	a:hover
+		background: none
+	svg:hover
+		fill: $linkHover
 .portfolio
 	padding: 50px 0
 .portfoilio_header
@@ -125,21 +132,56 @@ body
 .about
 	padding: 70px 0 75px 0
 	background: $AboutBackground
+	font-family: Lato
+	h3
+		color: $white
+		margin: 0 0 20px 0
+	p
+		color: $white
+		margin: 0 0 45px 0
 	&_content
-		padding: 0 60px
+		padding: 0 120px
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
-		gap: 60px
+		column-gap: 60px
 		&_item
 			background: $white
 			img
 				height: auto
 				width: 100%
+				margin: 0 0 20px 0
+			h4
+				font-size: 18px
+				margin: 0 0 10px 0
+			span
+				display: inline-block
+				font-style: italic
+
+				margin: 0 0 25px 0
+			p
+				display: inline-block
+				margin: 0 0 22px 0
+				padding: 0 0 0 9px
+				color: $textGrey
+				font-size: 14px
+				text-align: left
+.contact
+	padding: 55px 40px 60px
+	h3
+		margin: 0 0 20px 0
+	p
+		margin: 0 0 55px 0
+	input
+		border: 2px solid #bec3c7
 
 
 
-
-
+//foter
+.reverse_home
+	display: block
+	height: 47px
+	width: 47px
+	background-color: $buttonColor
 
 		
 			
