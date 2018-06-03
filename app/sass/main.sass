@@ -83,8 +83,8 @@ body
 		max-width: 45px
 		border: 0px solid
 		border-radius: 50%
-		svg
-			border-radius: 50%
+	svg
+		border-radius: 50%
 	a:hover
 		background: none
 	svg:hover
@@ -93,28 +93,34 @@ body
 	padding: 50px 0
 .portfoilio_header
 	h3
-		padding: 0 0 20px 0
+		margin: 0 0 20px 0
 	p
-		padding: 0 0 40px 0
+		margin: 0 0 40px 0
 .portfolio_nav
 	margin: 0 0 50px 0
 	ul
 		display: flex
+		flex-flow: row nowrap
 		margin: 0 auto
 		max-width: 50%
 		flex-direction: row
 		justify-content: space-between
+		li
+			flex-shrink: 0
 		a:hover
 			background: $linkHover
 		a
+			display: block
 			color: $white
 			background: $buttonColor
 .portfolio_content
+	padding: 0 62px
 	display: grid
-	grid-template-columns: 1fr 1fr 1fr 1fr
-	grid-template-rows: 1fr 1fr
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
 	grid-column-gap: 60px
 	grid-row-gap: 35px
+	li
+		justify-self: center
 	img
 		max-height: 170px
 		width: auto
@@ -145,7 +151,27 @@ body
 		grid-template-columns: 1fr 1fr 1fr
 		column-gap: 60px
 		&_item
+			position: relative
 			background: $white
+			ul
+				position: absolute
+				top: 80px
+				visibility: hidden
+				left: 0
+				width: 100%
+				display: flex
+				padding: 0 9%
+				li
+					
+					display: inline-block
+				a
+					display: block
+					background: $BgSocialicon
+				a:hover
+					background: $BgSocialiconHover
+				svg
+					fill: $white
+					opasity: 0.3
 			img
 				height: auto
 				width: 100%
@@ -165,23 +191,114 @@ body
 				color: $textGrey
 				font-size: 14px
 				text-align: left
+		&_item:hover
+			transition: all 1s
+			ul
+				visibility: visible
+				li
+					cursor: pointer
 .contact
+	background: $contactBackground
 	padding: 55px 40px 60px
 	h3
 		margin: 0 0 20px 0
 	p
 		margin: 0 0 55px 0
 	input
+		font-family: Lato
+		font-weight: 900
+		font-size: 18px
+		color: $textGrey
 		border: 2px solid #bec3c7
+	input::placeholder
+		vertical-align: top
+		font-family: Lato
+		font-size: 14px
+		color: $textGrey
+	textarea::placeholder
+		vertical-align: top
+		font-family: Lato
+		font-size: 14px
+		color: $textGrey
+
+.contact-form
+	display: grid
+	grid-template-columns: 25% 12.5% 12.5% 1fr 1fr
+	grid-template-rows: 45px minmax(150px, 1fr) 40px
+	grid-gap: 20px 25px
+.form
+	display: contents
+	textarea
+		padding: 10px
+		resize: none
+		border: 2px solid #bec3c7
+		grid-column-start: 1
+		grid-column-end: 4
+		grid-row-start: 2
+		grid-row-end: 3
+	input[type=email]
+		grid-column-start: 2
+		grid-column-end: 4
+		grid-row-start: 1
+		grid-row-end: 2
+	button
+		grid-template-rows: minmax(115px, 115px)
+		grid-column-start: 3
+		grid-column-end: 4
+		grid-row-start: 3
+		grid-row-end: 4
+		border: 0
+		font-family: Lato
+		font-size: 14px
+		color: $white
+		background: $buttonColor
+
+	//grid-column-start: 1
+	//grid-column-end: 3
+	//grid-row-start: 1
+	//grid-row-end: 3
+.contact-info
+	grid-column-start: 4
+	grid-column-end: 6
+	grid-row-start: 1
+	grid-row-end: 3
+	text-align: left
+	svg
+		max-height: 12px
+	p
+		text-align: left
+		margin: 0
+
+	
+
+	
+
+
 
 
 
 //foter
+footer
+	display: flex
+	align-self: stretch
+	justify-items: stretch
+	justify-content: space-between
+	align-items: center
+	padding: 23px 40px 20px
+	background: $footerGrey
+	color: $white
+	text-align: left
+	min-height: 87px
+	
 .reverse_home
-	display: block
+	display: inline-block
+	float: right
 	height: 47px
 	width: 47px
 	background-color: $buttonColor
+	svg
+		fill: #fff
+
 
 		
 			
